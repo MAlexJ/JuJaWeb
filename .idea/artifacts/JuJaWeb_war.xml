@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JuJaWeb:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="sqlcmd.war">
+      <element id="artifact" artifact-name="JuJaWeb:war exploded" />
+    </root>
+  </artifact>
+</component>

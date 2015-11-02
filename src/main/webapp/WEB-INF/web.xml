@@ -1,7 +1,51 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+
+    <display-name>SQLCmd</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Controller Servlets -->
+    <!-- HomeServlet  -->
+    <servlet>
+        <servlet-name>HomeController</servlet-name>
+        <servlet-class>ua.com.malex.controller.HomeController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeController</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <!-- SQLCmdController  -->
+    <servlet>
+        <servlet-name>SQLCmdController</servlet-name>
+        <servlet-class>ua.com.malex.controller.SQLCmdController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SQLCmdController</servlet-name>
+        <url-pattern>/sqlcmd</url-pattern>
+    </servlet-mapping>
+    <!-- HelpController  -->
+    <servlet>
+        <servlet-name>HelpController</servlet-name>
+        <servlet-class>ua.com.malex.controller.HelpController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelpController</servlet-name>
+        <url-pattern>/help</url-pattern>
+    </servlet-mapping>
+    <!-- ContactsController  -->
+    <servlet>
+        <servlet-name>ContactsController</servlet-name>
+        <servlet-class>ua.com.malex.controller.ContactsController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactsController</servlet-name>
+        <url-pattern>/contacts</url-pattern>
+    </servlet-mapping>
+
 </web-app>

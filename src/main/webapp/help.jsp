@@ -1,6 +1,5 @@
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,27 +54,21 @@
 </div>
 
 
-
-
-
 <div id="carousel" class="carousel slide">
     <jsp:include page="jsp/carousel.jsp" flush="true"/>
 </div>
 
 
+
+
+<h1>Hello ${name}</h1>
+
 <div class="container text-center">
     <jsp:include page="jsp/intro.jsp" flush="true"/>
 </div>
 
-<c:if test="${text eq 1}">
-<div class="jumbotron top-space">
-    <jsp:include page="jsp/jumbotron.jsp" flush="true"/>
-</div>
-</c:if>
 
-<footer id="footer" class="top-space">
-    <jsp:include page="jsp/footer.jsp" flush="true"/>
-</footer>
+
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -87,3 +80,4 @@
 </body>
 
 </html>
+
