@@ -45,7 +45,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ContactsController</servlet-name>
-        <url-pattern>/contacts</url-pattern>
+        <url-pattern>/contact</url-pattern>
     </servlet-mapping>
 
 </web-app>

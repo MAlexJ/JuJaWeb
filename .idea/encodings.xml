@@ -6,9 +6,15 @@
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/malex/dao" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/malex/datasource" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/malex/model" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/index.jsp" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/jsp/carousel.jsp" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/css" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/resources/css" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/resources/fonts" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/fonts" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/images" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/resources/img" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/resources/js" charset="windows-1251" />
     <file url="PROJECT" charset="windows-1251" />
   </component>
