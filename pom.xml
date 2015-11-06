@@ -77,7 +77,7 @@
                 <version>2.2</version>
                 <configuration>
                     <port>8080</port>
-                    <path>/sqlcmd</path>
+                    <path>/jujaweb</path>
                 </configuration>
             </plugin>
         </plugins>

@@ -13,39 +13,13 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-1">
-
-                            <form action="create" name="form_create" class="navbar-form" method="post">
-                                <div class="form-group">
-                                    <br>
-
-                                    <p>
-                                        Database name <br>
-                                        <input type="text" class="form-control" name="db_name"> <br>
-                                    </p>
-
-                                    <p>
-                                        User name <br>
-                                        <input type="text" class="form-control" name="user_name"> <br>
-                                    </p>
-
-                                    <p>
-                                        Password <br>
-                                        <input type="password" class="form-control" name="password"> <br><br>
-                                    </p>
-                                    <button type="submit" class="btn btn-info"><i class="fa fa-sign-in"></i> Enter
-                                    </button>
-                                </div>
-                            </form>
+                            <jsp:include page="tab_tabs/tab_1.jsp" flush="true"/>
                         </div>
                         <div class="tab-pane fade" id="tab-2">
-                            <br>
-
-                            <p>Item 2</p>
+                            <jsp:include page="tab_tabs/tab_2.jsp" flush="true"/>
                         </div>
                         <div class="tab-pane fade" id="tab-3">
-                            <br>
-
-                            <p>Item 3</p>
+                            <jsp:include page="tab_tabs/tab_3.jsp" flush="true"/>
                         </div>
                     </div>
                 </div>
@@ -53,4 +27,5 @@
         </div>
     </div>
 </div>
+
 

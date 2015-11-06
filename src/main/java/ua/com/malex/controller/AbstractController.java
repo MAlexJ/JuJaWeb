@@ -14,5 +14,6 @@ public abstract class AbstractController extends HttpServlet {
     @Override
     public void init() throws ServletException {
         this.manager = new DatabaseManagerImpl();
+        manager.connect("sqlcmd", "postgres", "postgres");
     }
 }

@@ -38,14 +38,23 @@
         <servlet-name>HelpController</servlet-name>
         <url-pattern>/help</url-pattern>
     </servlet-mapping>
-    <!-- ContactsController  -->
+    <!-- TablesController  -->
     <servlet>
-        <servlet-name>ContactsController</servlet-name>
-        <servlet-class>ua.com.malex.controller.ContactsController</servlet-class>
+        <servlet-name>TablesController</servlet-name>
+        <servlet-class>ua.com.malex.controller.TablesController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ContactsController</servlet-name>
-        <url-pattern>/contact</url-pattern>
+        <servlet-name>TablesController</servlet-name>
+        <url-pattern>/tables</url-pattern>
+    </servlet-mapping>
+    <!-- FindController  -->
+    <servlet>
+        <servlet-name>FindController</servlet-name>
+        <servlet-class>ua.com.malex.controller.FindController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindController</servlet-name>
+        <url-pattern>/find</url-pattern>
     </servlet-mapping>
 
 </web-app>

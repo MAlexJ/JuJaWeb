@@ -21,25 +21,16 @@
                         <li><a href="home">Home</a></li>
                         <li class="active"><a href="sqlcmd">SQLcmd</a></li>
                         <li><a href="help">Help</a></li>
-                        <li><a href="contact">Contact</a></li>
                     </c:when>
                     <c:when test="${flag eq 'help'}">
                         <li><a href="home">Home</a></li>
                         <li><a href="sqlcmd">SQLcmd</a></li>
                         <li class="active"><a href="help">Help</a></li>
-                        <li><a href="contact">Contact</a></li>
-                    </c:when>
-                    <c:when test="${flag eq 'contact'}">
-                        <li><a href="home">Home</a></li>
-                        <li><a href="sqlcmd">SQLcmd</a></li>
-                        <li><a href="help">Help</a></li>
-                        <li class="active"><a href="contact">Contact</a></li>
                     </c:when>
                     <c:otherwise>
                         <li class="active"><a href="home">Home</a></li>
                         <li><a href="sqlcmd">SQLcmd</a></li>
                         <li><a href="help">Help</a></li>
-                        <li><a href="contact">Contact</a></li>
                     </c:otherwise>
                 </c:choose>
             </ul>

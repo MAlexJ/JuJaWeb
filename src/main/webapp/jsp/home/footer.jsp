@@ -43,18 +43,16 @@
                 <div class="col-md-6 widget">
                     <div class="widget-body">
                         <p class="simplenav">
-                            <a href="#">Home</a> |
-                            <a href="about.html">About</a> |
-                            <a href="sidebar-right.html">Sidebar</a> |
-                            <a href="contact.html">Contact</a> |
-                            <b><a href="signup.html">Sign up</a></b>
+                            <a href="home">Home</a> |
+                            <a href="sqlcmd">SQLcmd</a> |
+                            <a href="help">Help</a>
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6 widget">
                     <div class="widget-body">
                         <p class="text-right">
-                            Copyright &copy; 2014, Your name. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a>
+                            Copyright &copy; 2015, Malex.
                         </p>
                     </div>
                 </div>
