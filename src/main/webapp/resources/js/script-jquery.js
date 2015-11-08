@@ -16,9 +16,9 @@ $(document).ready(function () {
                 if (responseJson != null) {
                     $("#countrytable").find("tr:gt(0)").remove();
                     var table1 = $("#countrytable");
-                    $.each(responseJson, function (key, value) {
+                    $.each(responseJson, function (key,value) {
                         var rowNew = $("<tr><td></td></tr>");
-                        rowNew.children().eq(0).text(value['name']);
+                        rowNew.children().eq(0).text(value.toString());
                         rowNew.appendTo(table1);
                     });
                 }
@@ -40,9 +40,9 @@ $(document).ready(function () {
                             flag = true;
                         }
                         var rowNew = $("<tr><td></td><td></td><td></td></tr>");
-                        rowNew.children().eq(0).text(value['id']);
-                        rowNew.children().eq(1).text(value['name']);
-                        rowNew.children().eq(2).text(value['password']);
+                        rowNew.children().eq(0).text(value['name']);
+                        rowNew.children().eq(1).text(value['password']);
+                        rowNew.children().eq(2).text(value['id']);
                         rowNew.appendTo(table1);
                     });
                     if (flag) {

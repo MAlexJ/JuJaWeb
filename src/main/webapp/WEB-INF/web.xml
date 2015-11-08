@@ -57,4 +57,9 @@
         <url-pattern>/find</url-pattern>
     </servlet-mapping>
 
+    <!-- Listeners -->
+    <listener>
+        <listener-class>ua.com.malex.listeners.SessionListener</listener-class>
+    </listener>
+
 </web-app>
