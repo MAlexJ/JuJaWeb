@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/malex/constants" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/malex/dao" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/malex/datasource" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/malex/entity/TransferObject.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/malex/entity/impl/TransferObjectImpl.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/malex/model" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/index.jsp" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/resources/css" charset="windows-1251" />

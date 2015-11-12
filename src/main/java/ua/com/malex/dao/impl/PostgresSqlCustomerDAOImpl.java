@@ -3,7 +3,7 @@ package ua.com.malex.dao.impl;
 import ua.com.malex.dao.CustomerDAO;
 import ua.com.malex.datasource.PostgresJDBC;
 import ua.com.malex.datasource.impl.PostgresJDBCImpl;
-import ua.com.malex.model.DataSet;
+import ua.com.malex.entity.TransferObject;
 
 import java.util.List;
 import java.util.Set;
@@ -23,7 +23,7 @@ public class PostgresSqlCustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public List<DataSet> getTableData(String tableName) {
+    public List<TransferObject> getTableData(String tableName) {
         return this.postgresJDBC.getTableData(tableName);
     }
 
@@ -39,12 +39,12 @@ public class PostgresSqlCustomerDAOImpl implements CustomerDAO {
 
 
     @Override
-    public void create(String tableName, DataSet input) {
+    public void create(String tableName, TransferObject input) {
         this.postgresJDBC.create(tableName, input);
     }
 
     @Override
-    public void update(String tableName, int id, DataSet newValue) {
+    public void update(String tableName, int id, TransferObject newValue) {
         this.postgresJDBC.update(tableName, id, newValue);
     }
 

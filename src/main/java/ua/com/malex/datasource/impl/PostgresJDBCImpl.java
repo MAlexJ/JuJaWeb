@@ -3,8 +3,8 @@ package ua.com.malex.datasource.impl;
 import org.apache.log4j.Logger;
 import ua.com.malex.constants.Constants;
 import ua.com.malex.datasource.PostgresJDBC;
-import ua.com.malex.model.DataSet;
-import ua.com.malex.model.impl.DataSetImpl;
+import ua.com.malex.entity.TransferObject;
+import ua.com.malex.entity.impl.TransferObjectImpl;
 
 import java.sql.*;
 
@@ -42,7 +42,7 @@ public class PostgresJDBCImpl implements PostgresJDBC {
     }
 
     @Override
-    public void update(String tableName, int id, DataSet newValue) {
+    public void update(String tableName, int id, TransferObject newValue) {
         try {
             PreparedStatement update = connection.prepareStatement("UPDATE public." + tableName + " SET name = ?, password = ? WHERE id = ?");
             update.setString(1, newValue.get(Constants.NAME).toString());
@@ -69,7 +69,7 @@ public class PostgresJDBCImpl implements PostgresJDBC {
             linkedList.removeFirst();
             resultSet.close();
         } catch (SQLException e) {
-            LOG.error("List<DataSet> getTableData(String tableName) -> " + e.getMessage());
+            LOG.error("List<TransferObject> getTableData(String tableName) -> " + e.getMessage());
         }
         return new LinkedHashSet<>(Collections.asLifoQueue(linkedList));
     }
@@ -80,14 +80,14 @@ public class PostgresJDBCImpl implements PostgresJDBC {
     }
 
     @Override
-    public List<DataSet> getTableData(String tableName) {
+    public List<TransferObject> getTableData(String tableName) {
         PreparedStatement selectTable;
-        List<DataSet> list = new LinkedList<>();
+        List<TransferObject> list = new LinkedList<>();
         try {
             selectTable = connection.prepareStatement("SELECT * FROM public." + tableName);
             resultSet = selectTable.executeQuery();
             while (resultSet.next()) {
-                DataSet dataSet = new DataSetImpl();
+                TransferObject dataSet = new TransferObjectImpl();
                 dataSet.put(Constants.NAME, resultSet.getString(Constants.NAME));
                 dataSet.put(Constants.PASSWORD, resultSet.getString(Constants.PASSWORD));
                 dataSet.put(Constants.ID, resultSet.getInt(Constants.ID));
@@ -95,7 +95,7 @@ public class PostgresJDBCImpl implements PostgresJDBC {
             }
             resultSet.close();
         } catch (SQLException e) {
-            LOG.error("List<DataSet> getTableData(String tableName) -> " + e.getMessage());
+            LOG.error("List<TransferObject> getTableData(String tableName) -> " + e.getMessage());
         }
         return list;
     }
@@ -126,7 +126,7 @@ public class PostgresJDBCImpl implements PostgresJDBC {
     }
 
     @Override
-    public void create(String tableName, DataSet input) {
+    public void create(String tableName, TransferObject input) {
         PreparedStatement insertTable;
         try {
             if (input.getNames().contains(Constants.ID)) {
@@ -143,7 +143,7 @@ public class PostgresJDBCImpl implements PostgresJDBC {
             insertTable.executeUpdate();
             insertTable.close();
         } catch (SQLException e) {
-            LOG.error("create(String tableName, DataSet input) -> " + e.getMessage());
+            LOG.error("create(String tableName, TransferObject input) -> " + e.getMessage());
         }
     }
 

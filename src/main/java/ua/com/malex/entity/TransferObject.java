@@ -1,4 +1,4 @@
-package ua.com.malex.model;
+package ua.com.malex.entity;
 
 import java.util.List;
 import java.util.Set;
@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * Created by oleksandr.baglai on 02.10.2015.
  */
-public interface DataSet {
+public interface TransferObject {
     void put(String name, Object value);
 
     List getValues();
@@ -15,6 +15,6 @@ public interface DataSet {
 
     Object get(String name);
 
-    void updateFrom(DataSet newValue);
+    void updateFrom(TransferObject newValue);
 
 }

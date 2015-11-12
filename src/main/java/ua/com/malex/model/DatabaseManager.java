@@ -1,14 +1,14 @@
 package ua.com.malex.model;
 
+import ua.com.malex.entity.TransferObject;
+
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created by oleksandr.baglai on 25.08.2015.
- */
+
 public interface DatabaseManager {
 
-    List<DataSet> getTableData(String tableName);
+    List<TransferObject> getTableData(String tableName);
 
     int getSize(String tableName);
 
@@ -18,9 +18,9 @@ public interface DatabaseManager {
 
     void clear(String tableName);
 
-    void create(String tableName, DataSet input);
+    void create(String tableName, TransferObject input);
 
-    void update(String tableName, int id, DataSet newValue);
+    void update(String tableName, int id, TransferObject newValue);
 
     Set<String> getTableColumns(String tableName);
 

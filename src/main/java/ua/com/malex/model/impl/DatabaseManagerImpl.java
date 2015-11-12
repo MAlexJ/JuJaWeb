@@ -3,7 +3,7 @@ package ua.com.malex.model.impl;
 
 import ua.com.malex.dao.CustomerDAO;
 import ua.com.malex.dao.DAOFactory;
-import ua.com.malex.model.DataSet;
+import ua.com.malex.entity.TransferObject;
 import ua.com.malex.model.DatabaseManager;
 
 import java.util.List;
@@ -20,7 +20,7 @@ public class DatabaseManagerImpl implements DatabaseManager {
     }
 
     @Override
-    public List<DataSet> getTableData(String tableName) {
+    public List<TransferObject> getTableData(String tableName) {
         return this.dao.getTableData(tableName);
     }
 
@@ -45,12 +45,12 @@ public class DatabaseManagerImpl implements DatabaseManager {
     }
 
     @Override
-    public void create(String tableName, DataSet input) {
+    public void create(String tableName, TransferObject input) {
         this.dao.create(tableName, input);
     }
 
     @Override
-    public void update(String tableName, int id, DataSet newValue) {
+    public void update(String tableName, int id, TransferObject newValue) {
         this.dao.update(tableName, id, newValue);
     }
 

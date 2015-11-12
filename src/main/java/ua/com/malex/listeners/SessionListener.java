@@ -1,6 +1,7 @@
 package ua.com.malex.listeners;
 
 import org.apache.log4j.Logger;
+import ua.com.malex.constants.Constants;
 
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
@@ -12,6 +13,7 @@ public class SessionListener implements HttpSessionListener {
     @Override
     public void sessionCreated(HttpSessionEvent httpSessionEvent) {
         HttpSession session = httpSessionEvent.getSession();
+        session.getServletContext().setAttribute(Constants.CURRENT_SESSION_ACCOUNT, session);
         if (LOG.isDebugEnabled()) {
             LOG.debug("A new session with id='" + session.getId() + "' has been created");
         }

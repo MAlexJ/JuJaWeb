@@ -1,14 +1,14 @@
 package ua.com.malex.datasource;
 
 
-import ua.com.malex.model.DataSet;
+import ua.com.malex.entity.TransferObject;
 
 import java.util.List;
 import java.util.Set;
 
 public interface PostgresJDBC {
 
-    List<DataSet> getTableData(String tableName);
+    List<TransferObject> getTableData(String tableName);
 
     boolean close();
 
@@ -16,9 +16,9 @@ public interface PostgresJDBC {
 
     void clear(String tableName);
 
-    void create(String tableName, DataSet input);
+    void create(String tableName, TransferObject input);
 
-    void update(String tableName, int id, DataSet newValue);
+    void update(String tableName, int id, TransferObject newValue);
 
     Set<String> getTableColumns(String tableName);
 

@@ -1,11 +1,11 @@
-package ua.com.malex.model.impl;
+package ua.com.malex.entity.impl;
 
 
-import ua.com.malex.model.DataSet;
+import ua.com.malex.entity.TransferObject;
 
 import java.util.*;
 
-public class DataSetImpl implements DataSet {
+public class TransferObjectImpl implements TransferObject {
     private Map<String, Object> map = new LinkedHashMap<>();
 
     @Override
@@ -36,7 +36,7 @@ public class DataSetImpl implements DataSet {
 
 
     @Override
-    public void updateFrom(DataSet newValue) {
+    public void updateFrom(TransferObject newValue) {
         this.map.clear();
 
         // TODO FIX

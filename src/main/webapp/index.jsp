@@ -25,15 +25,23 @@
 
     <c:when test="${flag eq 'sqlcmd'}">
         <jsp:include page="jsp/sqlcmd/introSQLcmd.jsp" flush="true"/>
+        <div class="container" id="connectDiv">
+            <div class="row">
+                <div class="col-xs-3">
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"
+                            title="Database Connection">
+                        <i class="fa fa-sign-in"></i>
+                        Connect
+                    </button>
+                </div>
+            </div>
+        </div>
         <jsp:include page="jsp/sqlcmd/tabsSQLcmd.jsp" flush="true"/>
     </c:when>
 
     <c:when test="${flag eq 'help'}">
-        <h1>help</h1>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-help">Help</button>
-        <jsp:include page="jsp/help/help.jsp" flush="true"/>
+        <jsp:include page="jsp/help/introHelp.jsp" flush="true"/>
     </c:when>
-
 
     <c:otherwise>
         <jsp:include page="jsp/home/intro.jsp" flush="true"/>

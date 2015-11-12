@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.jsp"><img src="resources/images/logo.png"
+            <a class="navbar-brand" href="home"><img src="resources/images/logo.png"
                                                           alt="Progressus HTML5 template"></a>
         </div>
         <div class="navbar-collapse collapse">
