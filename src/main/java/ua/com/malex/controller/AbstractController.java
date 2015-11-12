@@ -7,6 +7,8 @@ import ua.com.malex.entity.TransferObject;
 import ua.com.malex.model.DatabaseManager;
 import ua.com.malex.model.impl.DatabaseManagerImpl;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import java.util.List;
@@ -14,13 +16,12 @@ import java.util.Set;
 
 public abstract class AbstractController extends HttpServlet {
 
-    protected DatabaseManager manager;
+    protected DatabaseManager db_manager;
 
     @Override
-    public void init() throws ServletException {
+    public void init(ServletConfig config) throws ServletException {
+        this.db_manager = new DatabaseManagerImpl();
 
-        this.manager = new DatabaseManagerImpl();
-        this.manager.connect("sqlcmd", "postgres", "postgres");
     }
 
     protected String valueToJson(Set<String> tableNames) {

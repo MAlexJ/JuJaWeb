@@ -7,14 +7,15 @@
                 <button type="button" class="close" data-dismiss="modal">×</button>
                 <h4 class="modal-title" id="myModalLabel">Connection</h4>
             </div>
-            <div class="modal-body">
-                <form role="form" class="form-horizontal">
+            <form role="form" class="form-horizontal" method="post" action="connect">
+                <div class="modal-body">
+
                     <div class="form-group has-feedback">
                         <label class="control-label col-xs-3">Database name:</label>
 
                         <div class="col-xs-6">
                             <div class="input-group">
-                                <input type="text" class="form-control" required="required" id="db_name"
+                                <input type="text" class="form-control" required="required" name="db_name"
                                        pattern="[A-Za-z]{1,}">
                             </div>
                         </div>
@@ -24,7 +25,7 @@
 
                         <div class="col-xs-6">
                             <div class="input-group">
-                                <input type="text" class="form-control" required="required" id="user_name"
+                                <input type="text" class="form-control" required="required" name="user_name"
                                        pattern="[A-Za-z]{1,}">
                             </div>
 
@@ -35,18 +36,19 @@
 
                         <div class="col-xs-6">
                             <div class="input-group">
-                                <input type="text" class="form-control" required="required" id="password"
+                                <input type="text" class="form-control" required="required" name="password"
                                        pattern="[A-Za-z]{1,}">
                             </div>
 
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
-                <button id="save" type="button" class="btn btn-primary">Enter</button>
-            </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+                    <button id="save" type="submit" class="btn btn-primary">Enter</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

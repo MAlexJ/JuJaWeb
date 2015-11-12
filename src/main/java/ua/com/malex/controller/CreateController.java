@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import ua.com.malex.constants.Constants;
 import ua.com.malex.entity.TransferObject;
 import ua.com.malex.entity.impl.TransferObjectImpl;
+import ua.com.malex.model.DatabaseManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,7 @@ public class CreateController extends AbstractController {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        db_manager = (DatabaseManager) req.getSession().getAttribute("db_manager");
         String table_table = req.getParameter("table_table");
         String[] table_names = req.getParameterValues("table_name");
         String[] table_passwords = req.getParameterValues("table_password");
@@ -30,7 +32,7 @@ public class CreateController extends AbstractController {
                 transferObject.put(Constants.NAME, table_names[i]);
                 transferObject.put(Constants.PASSWORD, table_passwords[i]);
             }
-            manager.create(table_table, transferObject);
+            db_manager.create(table_table, transferObject);
         }
     }
 }

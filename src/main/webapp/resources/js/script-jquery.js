@@ -36,7 +36,7 @@ $(document).ready(function () {
                     var table1 = $("#countryTableFind");
                     var flag = false;
                     $.each(responseJson, function (key, value) {
-                        if (key.valueOf() == 1) {
+                        if (key.valueOf() == 0) {
                             flag = true;
                         }
                         var rowNew = $("<tr><td></td><td></td><td></td></tr>");
@@ -76,65 +76,9 @@ $(document).ready(function () {
             });
         });
 
-        $("#connect").click(function () {
-            var db_name = $('#db_name').val();
-            var user_name = $('#user_name').val();
-            var password = $('#password').val();
-            $.ajax({
-                type: "POST",
-                url: "./connect",
-                data: {db_name: db_name, user_name: user_name, password: password}
-            });
-        });
-
         $(function () {
             $("[data-toggle='tooltip']").tooltip();
         });
-
-        //при нажатии на кнопку с id="save"
-        $('#save').click(function () {
-            //переменная formValid
-
-            var formValid = true;
-            //перебрать все элементы управления input
-            $('input').each(function () {
-                //найти предков, которые имеют класс .form-group, для установления success/error
-                var formGroup = $(this).parents('.form-group');
-
-                //для валидации данных используем HTML5 функцию checkValidity
-                if (this.checkValidity()) {
-                    //добавить к formGroup класс .has-success, удалить has-error
-                    formGroup.addClass('has-success').removeClass('has-error');
-
-                } else {
-                    //добавить к formGroup класс .has-error, удалить .has-success
-                    formGroup.addClass('has-error').removeClass('has-success');
-
-                    //отметить форму как невалидную
-                    formValid = false;
-                }
-            });
-
-            if (formValid) {
-                var db_name = $('#db_name').val();
-                var user_name = $('#user_name').val();
-                var password = $('#password').val();
-
-                $('#myModal').modal('hide');
-                $('#connectDiv').addClass('hidden');
-                $('#success-alert').removeClass('hidden');
-
-
-                $.ajax({
-                    type: "POST",
-                    url: "./connect",
-                    data: {db_name: db_name, user_name: user_name, password: password}
-                });
-
-            }
-        });
-
-
     }
 );
 

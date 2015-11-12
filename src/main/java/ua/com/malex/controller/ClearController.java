@@ -1,6 +1,7 @@
 package ua.com.malex.controller;
 
 import org.apache.log4j.Logger;
+import ua.com.malex.model.DatabaseManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -12,8 +13,9 @@ public class ClearController extends AbstractController {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String clear = req.getParameter("clear");
-        manager.clear(clear);
+        db_manager = (DatabaseManager) req.getSession().getAttribute("db_manager");
+       String clear = req.getParameter("clear");
+        db_manager.clear(clear);
         LOG.debug("clear: " + clear);
     }
 }
