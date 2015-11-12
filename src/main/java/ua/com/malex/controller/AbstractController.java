@@ -3,14 +3,15 @@ package ua.com.malex.controller;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import ua.com.malex.constants.Constants;
 import ua.com.malex.entity.TransferObject;
 import ua.com.malex.model.DatabaseManager;
 import ua.com.malex.model.impl.DatabaseManagerImpl;
 
 import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Set;
 
@@ -21,7 +22,10 @@ public abstract class AbstractController extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         this.db_manager = new DatabaseManagerImpl();
+    }
 
+    protected DatabaseManager getDatabaseManager(HttpServletRequest req) {
+        return this.db_manager = (DatabaseManager) req.getSession().getAttribute(Constants.DB_MANAGER);
     }
 
     protected String valueToJson(Set<String> tableNames) {

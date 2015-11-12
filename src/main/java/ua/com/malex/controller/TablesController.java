@@ -1,7 +1,5 @@
 package ua.com.malex.controller;
 
-import ua.com.malex.model.DatabaseManager;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,7 +10,7 @@ public class TablesController extends AbstractController {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        db_manager = (DatabaseManager) req.getSession().getAttribute("db_manager");
+        db_manager = getDatabaseManager(req);
         Set<String> tableNames = db_manager.getTableNames();
         String value = valueToJson(tableNames);
         resp.setContentType("application/json");

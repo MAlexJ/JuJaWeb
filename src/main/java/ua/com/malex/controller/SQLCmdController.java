@@ -1,20 +1,16 @@
 package ua.com.malex.controller;
 
-import org.apache.log4j.Logger;
-import ua.com.malex.model.DatabaseManager;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class SQLCmdController extends AbstractController {
-    private static final Logger LOG = Logger.getLogger(SQLCmdController.class);
     private boolean connected = false;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        db_manager = (DatabaseManager) req.getSession().getAttribute("db_manager");
+        db_manager = getDatabaseManager(req);
         if (db_manager != null) {
             connected = db_manager.isConnected();
         }
@@ -26,7 +22,7 @@ public class SQLCmdController extends AbstractController {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("flag", "sqlcmd");
-        db_manager = (DatabaseManager) req.getSession().getAttribute("db_manager");
+        db_manager = getDatabaseManager(req);
         req.setAttribute("isConnected", db_manager.isConnected());
         req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
