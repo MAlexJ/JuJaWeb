@@ -55,5 +55,6 @@
 <script src="resources/js/jQuery.headroom.min.js"></script>
 <script src="resources/js/script-jquery.js"></script>
 <script src="resources/js/jquery.form.js"></script>
+<script src="resources/js/jquery.cookie.js"></script>
 </body>
 </html>
